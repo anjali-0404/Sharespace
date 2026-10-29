@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-zinc-50 text-zinc-900 antialiased font-sans;
+}
+
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-brand-600;
+}
+
+/* ---------- Custom scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-zinc-300;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-zinc-400;
+}
+
+/* ---------- Dot grid background ---------- */
+.bg-dot-grid {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-dot-grid-dark {
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ---------- Line grid background ---------- */
+.bg-line-grid {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.bg-line-grid-dark {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* ---------- Gradient text utility ---------- */
+.text-gradient {
+  @apply bg-clip-text text-transparent;
+}
+
+/* ---------- Shimmer text ---------- */
+.text-shimmer {
+  background: linear-gradient(
+    110deg,
+    #e4e4e7 8%,
+    #f4f4f5 18%,
+    #e4e4e7 33%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 2.5s linear infinite;
+}
+
+/* ---------- Border beam pseudo ---------- */
+.beam-border::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(120deg, transparent 30%, #34d399 50%, transparent 70%);
+  background-size: 300% 100%;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: shimmer 3s linear infinite;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.beam-border:hover::after {
+  opacity: 1;
+}
+
+/* ---------- Glassmorphism ---------- */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-dark {
+  background: rgba(9, 9, 11, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* ---------- Perspective for 3D cards ---------- */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+/* ---------- Mask fade for beams ---------- */
+.mask-fade-b {
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
