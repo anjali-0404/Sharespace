@@ -5,14 +5,14 @@
    "id": 1,
    "name": "You",
    "email": "demo@sharespace.io",
-   "pass": "072d121d95edfa188be87d3db3ecaa8e:33a6832780c2ba4cb1c69e43fc3cbaba9234e90a78907dd1ae785e85145cded349d7e1190b03d2b2fb8db9ec990d0d7bac4224669c4c4f4ad337c2ce7ebf6a71",
+   "pass": "5d8991e91ac36e1aa1da3e99da4fadb3:93cb370383597c7603e325c1695839fccdc7545e8ab3a97debdedb8af16071530cc96042151ae2735e2e01170102e220074863789579b03b6b4701e512eb6bcc",
    "role": "user"
   },
   {
    "id": 2,
    "name": "Admin",
    "email": "owner@sharespace.io",
-   "pass": "696fbe21df7eeca096527120fb2049c3:c4540e85159dfbbf3140ecfcf05f56fce6e553ca214fe7d34dd648b6cc1c27dfcd94ed9b005b5d0ca67cec30b63533e0f3ddcc6a14003dbe3369610ebbcb24e9",
+   "pass": "517e1ff24784cfd61e79ba6e3023149a:c032197171c11af5b4b57926fd532e06a4a4db47492cbdd3cfa6b53599731c5440f6fef2081242ad8585aa760260b0704042288003b223abb42aa321eba11d4b",
    "role": "owner"
   }
  ],
@@ -60,7 +60,42 @@
  ],
  "log": [
   {
-   "t": "2026-10-29T20:38:34.567Z",
+   "t": "2026-10-29T21:23:51.050Z",
+   "actor": "Admin",
+   "action": "Signed out",
+   "detail": "",
+   "tone": "n"
+  },
+  {
+   "t": "2026-10-29T21:20:05.932Z",
+   "actor": "Admin",
+   "action": "Signed in",
+   "detail": "owner@sharespace.io",
+   "tone": "n"
+  },
+  {
+   "t": "2026-10-29T21:20:03.397Z",
+   "actor": "You",
+   "action": "Signed out",
+   "detail": "",
+   "tone": "n"
+  },
+  {
+   "t": "2026-10-29T21:18:38.019Z",
+   "actor": "You",
+   "action": "Signed in",
+   "detail": "demo@sharespace.io",
+   "tone": "n"
+  },
+  {
+   "t": "2026-10-29T20:50:27.245Z",
+   "actor": "Admin",
+   "action": "Signed out",
+   "detail": "",
+   "tone": "n"
+  },
+  {
+   "t": "2026-10-29T20:50:14.527Z",
    "actor": "System",
    "action": "Server started",
    "detail": "Seed data loaded",
